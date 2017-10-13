@@ -1,0 +1,58 @@
+ @import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+body{
+  background-color: "white";
+}
+
+.question{
+    font-family: 'Lato', sans-serif;
+    font-size: 6vw;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+
+}
+
+.four{
+  margin: auto;
+width: 90%;
+padding: 10px;
+}
+
+.square {
+    float:left;
+    position: relative;
+    width: 45%;
+    padding-bottom : 45%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    /*background-color:#1E1E1E;*/
+    overflow:hidden;
+}
+
+.content {
+    position:absolute;
+    height:90%; /* = 100% - 2*5% padding */
+    width:90%; /* = 100% - 2*5% padding */
+    padding: 10%;
+
+}
+.table{
+    display:table;
+    width:100%;
+    height:100%;
+}
+.table-cell{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+
+
+/*  For responsive images */
+
+.content .rs{
+    width:auto;
+    height:auto;
+    max-height:90%;
+    max-width:100%;
+}
