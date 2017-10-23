@@ -3,24 +3,7 @@
 
   // Colors
   var colors = ["#A2ABEA", "#7FC9F7", "#B4D738", "#881700", "#FDD927"];
-
-
-  // Get all images
-  var folder = "images/";
-  
- /* $.ajax({
-    url: folder,
-    success: function(data) {
-      $(data).find("a").attr("href", function(i, val) {
-        if (val.match(/\.(jpe?g|png|gif)$/)) {
-          //$("body").append( "<img src='"+ folder + val +"'>" );
-          images.push(folder + val);
-        }
-      });
-      setColors();
-      // setImages();
-    }
-  });*/
+  var nbSteps = 0;
 
   $(document).ready(function(){
       setColors();
@@ -71,7 +54,7 @@
   }
 
   function ajaxImages(listImages, color) {
-    folder = folder + color + "/"
+    folder = "images/" + color + "/";
     var images = [];
     $.ajax({
       url: folder,
@@ -131,5 +114,8 @@
 
   function clickImage(image) {
     console.log("Clicked image " + image);
+    if (++nbSteps >= 2) {
+      window.location.assign("playlist.html");
+    }
     setColors();
   }
