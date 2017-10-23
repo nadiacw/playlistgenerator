@@ -47,7 +47,7 @@
     for (i = 0; i < x.length; i++) { 
       string += x[i].getElementsByTagName("image");
     }
-    document.getElementById("demo").innerHTML = string + ;
+    document.getElementById("demo").innerHTML = string + stringColor;
   }
 
   function rgbToString(rgb) {
@@ -86,9 +86,9 @@
     var new_colors = colors.slice(0);
     for (var i = 0; i < options.length; i++) {
       var rand = Math.floor(Math.random() * new_colors.length);
-      options[i].parentNode.style.backgroundColor = new_colors[rand];
       // hide images
       options[i].style.opacity = 0;
+      options[i].parentNode.style.backgroundColor = new_colors[rand];
       new_colors.splice(rand, 1);
     }
   }
