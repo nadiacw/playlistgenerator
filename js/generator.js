@@ -110,6 +110,7 @@
       new_images.splice(rand, 1);
       // full opacity
       options[i].style.opacity = 1;
+      options[i].parentNode.style.backgroundColor = "transparent";
     }
   }
 
