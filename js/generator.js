@@ -28,9 +28,9 @@
     var new_colors = colors.slice(0);
     for (var i = 0; i < options.length; i++) {
       var rand = Math.floor(Math.random() * new_colors.length);
-      options[i].parentNode.style.backgroundColor = new_colors[rand];
       // hide images
       options[i].style.opacity = 0;
+      options[i].parentNode.style.backgroundColor = new_colors[rand];
       new_colors.splice(rand, 1);
     }
   }
