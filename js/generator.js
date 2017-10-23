@@ -7,7 +7,6 @@
 
   // Get all images
   var folder = "images/";
-  var images = [];
   
  /* $.ajax({
     url: folder,
@@ -41,13 +40,20 @@
   function getImages(xml, color) {
     var x, i, xmlDoc, table;
     xmlDoc = xml.responseXML;
+    imageList = null;
     string = "";
     stringColor = rgbToString(color);
-    x = xmlDoc.getElementsByTagName("color")[];
+    x = xmlDoc.getElementsByTagName("color");
     for (i = 0; i < x.length; i++) { 
-      string += x[i].getElementsByTagName("image");
+      if (x[i].getAttribute("category") == stringColor) {
+        imageList = x[i].getElementsByTagName("image");
+
+        for (j = 0; j < imageList.length; j++) {
+          string += imageList[j].getAttribute("category") + ";";
+        }
+      }
     }
-    document.getElementById("demo").innerHTML = string + stringColor;
+    ajaxImages(string, stringColor);
   }
 
   function rgbToString(rgb) {
@@ -64,7 +70,9 @@
     else return null;
   }
 
-  function ajaxImages(color) {
+  function ajaxImages(listImages, color) {
+    folder = folder + color + "/"
+    var images = [];
     $.ajax({
       url: folder,
       success: function(data) {
@@ -74,8 +82,7 @@
             images.push(folder + val);
           }
         });
-        setColors();
-        // setImages();
+        setImages(images);
       }
     });
   }
@@ -94,7 +101,7 @@
   }
 
 
-  function setImages() {
+  function setImages(images) {
     isColorMode = false;
     // For each option, get a random new image, making sure they aren't repeated
     var new_images = images.slice(0);
@@ -120,7 +127,6 @@
   function clickColor(color) {
     console.log("Clicked color " + color);
     loadXMLDoc(color);
-    setImages();
   }
 
   function clickImage(image) {
