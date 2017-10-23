@@ -110,3 +110,7 @@
    max-height: 90%;
    max-width: 100%;
  }
+
+ #color1 .rsEnd, #color2 .rsEnd {
+     display: none;
+ }
