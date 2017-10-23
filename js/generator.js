@@ -5,6 +5,8 @@
   var colors = ["#A2ABEA", "#7FC9F7", "#B4D738", "#881700", "#FDD927"];
   var nbSteps = 0;
   var clickedImg = [];
+  var colorOn = true;
+  var images = [];
 
   $(document).ready(function(){
       setColors();
@@ -70,7 +72,6 @@
 
   function ajaxImages(listImages, color) {
     folder = "images/" + color + "/";
-    var images = [];
     $.ajax({
       url: folder,
       success: function(data) {
@@ -122,9 +123,18 @@
     };
   }
 
+  document.getElementById("rectangle").onclick = function() {
+    if(colorOn)
+      setColors();
+    else
+      setImages(images);
+  }
+
   function clickColor(color) {
     console.log("Clicked color " + color);
     clickedImg.push(stringToHex(rgbToString(color)));
+    colorOn = false;
+    images = [];
     loadXMLDoc(color);
   }
 
@@ -135,6 +145,7 @@
       location.href = location.href+'?var1='+clickedImg[0]+'&var2='+clickedImg[1]+'?var3='+clickedImg[2]+'?var4='+clickedImg[3];
       window.location.assign("playlist.html"+'?var1='+clickedImg[0]+'?var2='+clickedImg[1]+'?var3='+clickedImg[2]+'?var4='+clickedImg[3]);
     } else {
+      colorOn = true;
       setColors();
     }
   }
