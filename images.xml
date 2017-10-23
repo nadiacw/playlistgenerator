@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+    <color category="red">
+        <image category="img14">
+            <tag></tag>
+        </image>
+        <image category="img15">
+            <tag></tag>
+        </image>
+    </color>
+
+    <color category="green">
+        <image category="img2">
+            <tag></tag>
+        </image>
+        <image category="img9">
+            <tag></tag>
+        </image>
+        <image category="img11">
+            <tag></tag>
+        </image>
+        <image category="img12">
+            <tag></tag>
+        </image>
+    </color>
+
+    <color category="blue">
+        <image category="img1">
+            <tag></tag>
+        </image>
+        <image category="img2">
+            <tag></tag>
+        </image>
+        <image category="img3">
+            <tag></tag>
+        </image>
+        <image category="img4">
+            <tag></tag>
+        </image>
+        <image category="img5">
+            <tag></tag>
+        </image>
+        <image category="img6">
+            <tag></tag>
+        </image>
+        <image category="img8">
+            <tag></tag>
+        </image>
+        <image category="img16">
+            <tag></tag>
+        </image>
+        <image category="img17">
+            <tag></tag>
+        </image>
+        <image category="img19">
+            <tag></tag>
+        </image>
+    </color>
+
+    <color category="purple">
+        <image category="img1">
+            <tag></tag>
+        </image>
+        <image category="img2">
+            <tag></tag>
+        </image>
+        <image category="img6">
+            <tag></tag>
+        </image>
+        <image category="img8">
+            <tag></tag>
+        </image>
+        <image category="img9">
+            <tag></tag>
+        </image>
+        <image category="img16">
+            <tag></tag>
+        </image>
+        <image category="img17">
+            <tag></tag>
+        </image>
+    </color>
+
+    <color category="yellow">
+        <image category="img8">
+            <tag></tag>
+        </image>
+        <image category="img9">
+            <tag></tag>
+        </image>
+        <image category="img18">
+            <tag></tag>
+        </image>
+        <image category="img20">
+            <tag></tag>
+        </image>
+        <image category="img21">
+            <tag></tag>
+        </image>
+    </color>
+</colors>
