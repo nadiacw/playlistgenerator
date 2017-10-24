@@ -19,7 +19,7 @@
         getImages(this, color);
       }
     };
-    xmlhttp.open("GET", "images.xml" , true);
+    xmlhttp.open("GET", "../images.xml" , true);
     xmlhttp.send();
   }
 
@@ -30,7 +30,7 @@
     string = "";
     stringColor = rgbToString(color);
     x = xmlDoc.getElementsByTagName("color");
-    for (i = 0; i < x.length; i++) { 
+    for (i = 0; i < x.length; i++) {
       if (x[i].getAttribute("category") == stringColor) {
         imageList = x[i].getElementsByTagName("image");
 
