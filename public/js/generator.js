@@ -19,7 +19,7 @@
         getImages(this, color);
       }
     };
-    xmlhttp.open("GET", "images.xml" , true);
+    xmlhttp.open("GET", "js/images.xml" , true);
     xmlhttp.send();
   }
 
