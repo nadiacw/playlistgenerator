@@ -72,6 +72,7 @@
 
   function ajaxImages(listImages, color) {
     folder = "https://raw.githubusercontent.com/nadiacw/playlistgenerator/master/images/" + color + "/";
+    console.log(folder);
     $.ajax({
       url: folder,
       success: function(data) {
