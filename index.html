@@ -9,7 +9,7 @@
 <body>
 
   <div class="question">
-    What are you feeling <span id="userName"></span> ?
+    What are you feeling <span class="userName"></span> ?
   </div>
 
   <div class="four">
@@ -58,11 +58,12 @@
     $.ajax({
       url: 'https://api.spotify.com/v1/me',
       headers: {
-          'Authorization': 'Bearer ' + window.location.href.split("=")[1]
+          'Authorization': 'Bearer ' + window.location.href.split("access_token=")[1]
       },
       success: function(response) {
-        $("#userName").html(response["id"]);
+          $(".userName").html(response["id"]);
+          createPlaylist(response["id"], window.location.href.split("access_token=")[1]);
       }
-   });
+  });
 </script>
 </html>

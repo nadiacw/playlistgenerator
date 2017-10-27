@@ -143,8 +143,7 @@
     console.log("Clicked image " + image);
     clickedImg.push(image.split("http://localhost:8000/")[1]);
     if (++nbSteps >= 2) {
-      location.href = location.href+'?var1='+clickedImg[0]+'&var2='+clickedImg[1]+'?var3='+clickedImg[2]+'?var4='+clickedImg[3];
-      window.location.assign("playlist.html"+'?var1='+clickedImg[0]+'?var2='+clickedImg[1]+'?var3='+clickedImg[2]+'?var4='+clickedImg[3]);
+      window.location.assign("playlist.html"+'?var1='+clickedImg[0]+'?var2='+clickedImg[1]+'?var3='+clickedImg[2]+'?var4='+clickedImg[3]+'?access_token='+window.location.href.split("=")[1]);
     } else {
       colorOn = true;
       setColors();

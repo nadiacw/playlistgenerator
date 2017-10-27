@@ -9,7 +9,7 @@
 <body>
 
   <div class="question">
-    Here's your generated playlist!
+    Here's your generated playlist <span class="userName"></span> !
   </div>
 
   <div class="fourEnd">
@@ -55,6 +55,18 @@
     <iframe id="playlistFrame" src="https://open.spotify.com/embed?uri=spotify:user:nadiacw:playlist:6q5gUi0u5f0Cxo3nDrE0iz&theme=white" frameborder="0" allowtransparency="true"></iframe>
   </div>
 </body>
-<!-- <script type='text/javascript' src='js/generator.js'></script> -->
+
 <script type='text/javascript' src='js/urlDecoder.js'></script>
+<script>
+  $.ajax({
+    url: 'https://api.spotify.com/v1/me',
+    headers: {
+        'Authorization': 'Bearer ' + window.location.href.split("access_token=")[1]
+    },
+    success: function(response) {
+        $(".userName").html(response["id"]);
+    }
+  });
+</script>
+<script type='text/javascript' src='js/spotify.js'></script>
 </html>
